@@ -1,0 +1,44 @@
+{
+  "source": {
+    "directories": [
+      "./src"
+    ],
+    "excludes": [
+      "./vendor/"
+    ]
+  },
+  "phpUnit": {
+    "configDir": ".\/tests\/",
+    "customPath": ".\/bin\/phpunit"
+  },
+  "logs": {
+    "text": ".\/infection-report"
+  },
+  "mutators": {
+    "@default": true,
+    "IncrementInteger": {
+        "ignore": [
+            "Tleckie\\Password\\Requirements::__construct",
+            "Tleckie\\Password\\Hash::__construct"
+        ]
+    },
+    "DecrementInteger": {
+        "ignore": [
+            "Tleckie\\Password\\Requirements::__construct",
+            "Tleckie\\Password\\Hash::__construct"
+        ]
+    },
+    "TrueValue": {
+        "ignore": [
+            "Tleckie\\Password\\Requirements::__construct"
+        ]
+    },
+    "ProtectedVisibility": {
+        "ignore": [
+            "Tleckie\\Password\\Requirements::pattern"
+        ]
+    }
+  },
+  "testFramework":"phpunit",
+  "bootstrap": "./vendor/autoload.php"
+}

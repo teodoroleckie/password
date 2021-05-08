@@ -1,0 +1,66 @@
+{
+  "name": "tleckie/password",
+  "license": "MIT",
+  "description": "PHP manager password",
+  "type": "library",
+  "homepage": "https://github.com/teodoroleckie/password",
+  "authors": [
+    {
+      "name": "Teodoro Leckie Westberg",
+      "email": "teodoroleckie@gmail.com"
+    }
+  ],
+  "keywords": [
+    "tleckie",
+    "password",
+    "generate",
+    "password-validator",
+    "validator",
+    "password-hash",
+    "hash-validator",
+    "hash",
+    "php-password",
+    "security",
+    "safety-password",
+    "security-password",
+    "php-8"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tleckie\\Password\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tleckie\\Password\\Tests\\": "tests/"
+    }
+  },
+  "provide": {
+  },
+  "require": {
+    "php": "^8"
+  },
+  "require-dev": {
+    "infection/infection": "^0.21.5",
+    "phpunit/phpunit": "^9.5",
+    "friendsofphp/php-cs-fixer": "v3.0.0-beta.2"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "fix-src": "./bin/php-cs-fixer fix src/ ",
+    "fix-tests": "./bin/php-cs-fixer fix tests/",
+    "tests": "./bin/phpunit ./tests/",
+    "infection": "infection",
+    "check": [
+      "@fix-src",
+      "@fix-tests",
+      "@tests",
+      "@infection"
+    ]
+  }
+}
