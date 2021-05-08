@@ -26,6 +26,6 @@ class Hash implements HashInterface
      */
     public function createHash(string $password): string
     {
-        return password_hash($password, PASSWORD_BCRYPT);
+        return password_hash($password, \PASSWORD_BCRYPT);
     }
 }
