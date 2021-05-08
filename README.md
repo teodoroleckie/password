@@ -1,4 +1,4 @@
-# Php password manager
+# Php password manager - Password hash validator / password requirements validator
 Password hash validator / password requirements validator 
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/teodoroleckie/password/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/teodoroleckie/password/?branch=main)
